@@ -8,13 +8,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	
 	@Override
-    protected void configure(AuthenticationManagerBuilder builder) throws Exception {
-		 builder
-	        .inMemoryAuthentication()
-	        .withUser("garrincha").password("123")
-	            .roles("USER")
-	        .and()
-	        .withUser("zico").password("123")
-	            .roles("USER");
-	  }
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+
+        auth.inMemoryAuthentication()
+                .withUser("user").password("{noop}password").roles("USER")
+                .and()
+                .withUser("admin").password("{noop}123456").roles("ADMIN");
+
+    }
 }
+// Base para autenciação spring security
+//https://mkyong.com/spring-boot/spring-security-there-is-no-passwordencoder-mapped-for-the-id-null/
