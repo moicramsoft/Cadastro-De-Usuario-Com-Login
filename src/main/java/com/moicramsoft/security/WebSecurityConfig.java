@@ -17,5 +17,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     }
 }
-// Base para autenciação spring security
+// Base para autenticação spring security
 //https://mkyong.com/spring-boot/spring-security-there-is-no-passwordencoder-mapped-for-the-id-null/
